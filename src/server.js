@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDB from "./config/db.js";
+import connectDB from "../config/db.js";
 import { createNutritionalProfile, getNutritionalProfile, updateNutritionalProfile } from "./controllers/nutritionalProfileController.js";
 
 dotenv.config();
