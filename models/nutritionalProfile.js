@@ -11,3 +11,5 @@ const nutritionalProfileSchema = new mongoose.Schema({
     budgetLevel: { type: String, enum: ['Minimal', 'Normal', 'Premium'], required: true },
     createdAt: { type: Date, default: Date.now },
 });
+
+export default mongoose.model('NutritionalProfile', nutritionalProfileSchema);

@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import NutritionalProfile from '../models/nutritionalProfile.js';
+import jwt from 'jsonwebtoken';
 dotenv.config();
 
 //helper function to verify JWT token
