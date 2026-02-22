@@ -16,7 +16,7 @@ const verifyJwtToken = (token) => {
 //Create a nutritional profile by jwt token
 export const createNutritionalProfile = async (req, res) => {
     try {
-        const token = req.headers.authorization.split(" ")[0];
+        const token = req.headers.authorization.split(" ")[1];
         if (!token) {
             return res.status(401).json({ message: 'No token provided' });
         }
@@ -54,7 +54,7 @@ export const createNutritionalProfile = async (req, res) => {
 // Get a nutritional profile by jwt token
 export const getNutritionalProfile = async (req, res) => {
     try {
-        const token = req.headers.authorization?.split(' ')[0];
+        const token = req.headers.authorization?.split(' ')[1];
         if (!token) {
             return res.status(401).json({ message: 'No token provided' });
         }
