@@ -1,13 +1,6 @@
 import dotenv from 'dotenv';
-import NutritionalProfile from './models/NutritionalProfile.js';
+import NutritionalProfile from '../models/nutritionalProfile.js';
 dotenv.config();
-
-// //helper function to create JWT token
-// const createJwtToken = (userId, expireTime) => {
-//   return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
-//     expiresIn: expireTime,
-//   });
-// };
 
 //helper function to verify JWT token
 const verifyJwtToken = (token) => {
@@ -18,26 +11,6 @@ const verifyJwtToken = (token) => {
   }
 };
 
-// Create a new nutritional profile
-// export const createNutritionalProfile = async (req, res) => {
-//     try {
-//         const { userId, age, sex, weight, height, activityLevel, dietaryPreferences, budgetLevel } = req.body;
-//         const newProfile = new NutritionalProfile({
-//             userId,
-//             age,
-//             sex,
-//             weight,
-//             height,
-//             activityLevel,
-//             dietaryPreferences,
-//             budgetLevel,
-//         });
-//         const savedProfile = await newProfile.save();
-//         res.status(201).json(savedProfile);
-//     } catch (error) {
-//         res.status(500).json({ message: 'Error creating nutritional profile', error: error.message });
-//     }
-// };
 
 //Create a nutritional profile by jwt token
 export const createNutritionalProfile = async (req, res) => {
