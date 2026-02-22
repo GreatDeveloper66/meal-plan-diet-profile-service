@@ -11,15 +11,3 @@ const nutritionalProfileSchema = new mongoose.Schema({
     budgetLevel: { type: String, enum: ['Minimal', 'Normal', 'Premium'], required: true },
     createdAt: { type: Date, default: Date.now },
 });
-
-
-{
-    "age": 33,
-            "sex": "male",
-            "weight": 55,
-            "height": 165,
-            "activityLevel": "moderate",
-            "dietaryPreferences": ["Normal"],
-            "budgetLevel": "Normal"
-}
-
