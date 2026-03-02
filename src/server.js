@@ -7,6 +7,7 @@ import {
   createNutritionalProfile,
   getNutritionalProfile,
   updateNutritionalProfile,
+  deleteNutritionalProfile
 } from "../controllers/nutritionalProfileController.js";
 
 dotenv.config();
@@ -29,5 +30,6 @@ app.get("/api/hello", (req, res) => {
 app.post("/api/create-nutritional-profile", createNutritionalProfile);
 app.get("/api/get-nutritional-profile", getNutritionalProfile);
 app.patch("/api/update-nutritional-profile", updateNutritionalProfile);
+app.delete("/api/delete-nutritional-profile", deleteNutritionalProfile);
 
 export default app;

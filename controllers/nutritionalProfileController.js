@@ -97,3 +97,23 @@ export const updateNutritionalProfile = async (req, res) => {
         res.status(500).json({ message: 'Error updating nutritional profile', error: error.message });
     }
 };
+
+export const deleteNutritionalProfile = async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(' ')[1];
+        if (!token) {
+            return res.status(401).json({ message: 'No token provided' });
+        }   
+        const decoded = verifyJwtToken(token);
+        if (!decoded) {
+            return res.status(401).json({ message: 'Invalid token' });
+        }
+        const deletedProfile = await NutritionalProfile.findOneAndDelete({ userId: decoded.id });
+        if (!deletedProfile) {
+            return res.status(404).json({ message: 'Nutritional profile not found' });
+        }
+        res.status(200).json({ message: 'Nutritional profile deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error deleting nutritional profile', error: error.message });
+    }
+};
