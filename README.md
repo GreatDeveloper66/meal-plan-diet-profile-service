@@ -32,10 +32,10 @@ This service manages each user's dietary profile — the core data used to perso
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `api/create-diet-profile` | Create a new diet profile |
-| GET | `api/get-diet-profile` | Retrieve a user's diet profile |
-| PUT | `api/update-diet-profile` | Update a user's diet profile |
-| DELETE | `api/delete-diet-profile` | Delete a user's diet profile |
+| POST | `api/create-nutritional-profile` | Create a new diet profile |
+| GET | `api/get-nutritional-profile` | Retrieve a user's diet profile |
+| PUT | `api/update-nutritional-profile` | Update a user's diet profile |
+| DELETE | `api/delete-nutritional-profile` | Delete a user's diet profile |
 
 ---
 
